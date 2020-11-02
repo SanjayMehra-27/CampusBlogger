@@ -1,0 +1,114 @@
+  
+    #post{    
+    max-height:350px;
+    overflow: hidden;
+    opacity: 0.8;
+    content: no-open-quote;
+    font-variant: small-caps;
+    font-weight: lighter;
+    columns: auto;
+    justify-content: space-around;
+    text-overflow: ellipsis;
+    text-align: justify;
+    column-fill: balance;
+    flex: 18em;
+    font-family: sans-serif;
+    align-items: center;
+    align-content: center;
+   
+    
+     }
+     
+     .footerX{
+     
+     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  	 border-radius: 20px 20px;
+     }
+     
+     
+    #readmoreLine{
+     
+    padding:5px;
+    visibility: collapse;
+    opacity: inherit;
+    
+    
+    }
+  	img[src="data:image/jpg;base64,"] {
+	visibility: hidden;
+	}
+	
+	iframe{
+    display: none;
+	}
+	    
+	    
+	    
+	 	/*
+*
+* ==========================================
+* CUSTOM UTIL ClASS FOR NAVBAR
+* ==========================================
+*
+*/
+.navbar {
+	background-color: #343a40e3;
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+	
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus{
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px 20px;
+  text-align:center;
+  size: 20px;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+/* Change navbar styling on scroll */
+.navbar.active {
+    background: #fff;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.navbar.active .nav-link {
+    color: #555;
+    
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+     color: #ffffff;
+     background-color: black;
+     text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+    
+}
+
+
+/* Change navbar styling on small viewports */
+@media (max-width: 991.98px) {
+    .navbar {
+        background: #fff;
+    }
+
+    .navbar .navbar-brand, .navbar .nav-link {
+        color: #555;
+    }
+}
+

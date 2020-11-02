@@ -39,7 +39,6 @@
 
 				<!-- SuccessMessage -->
 
-      <p id="alertMessage" class="alert alert-danger" style="width: 30%; margin:auto; margin-top:3%; padding: 40px; top: auto;"  > <b class="text-dark"> ${SuccessMessage} </b> <span class="close" data-dismiss="alert"> X </span></p>
 	
    <!-- body of shadow form -->
     <div class=" container mt-2 pt-2 d-sm-flex justify-content-sm-center ">
@@ -59,6 +58,9 @@
       
 <div class="card-header bg-dark">
 <h4 class="text-light">LogIn</h4>
+ <!-- Logo -->
+                    <img alt="" src="views/img/logo1.png" style="width:17em; ">
+
 
 </div>
 
@@ -102,7 +104,9 @@
                           <div class="flex-sm-column form-group flex-fill justify-content-sm-center">
                             <div class="input-group mb-3 p-4">
                             <p> <b> Click Here For </b>
-                             <a href="${pageContext.request.contextPath }/index.jsp" ><b> Sign Up </b></a> 
+                             <a href="${pageContext.request.contextPath }/index.jsp" > 
+                              Sign Up
+                              </a> 
                               </p>
                    
                         	</div>

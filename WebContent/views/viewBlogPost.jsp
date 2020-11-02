@@ -59,11 +59,12 @@
     
     
      <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" color-on-scroll="100">
+    <nav class="navbar navbar-expand-lg fixed-top " color-on-scroll="70">
         <div class="container">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="${pageContext.request.contextPath }/StudentController?action=HOME&cId=${student.collegeId}" rel="tooltip" title="Home" data-placement="bottom">
-                    CampusLife
+                   
+
                 </a>
                 <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
@@ -109,7 +110,7 @@
     
 	<div class="card bg-light fixed" style="width:100%; margin:1px; margin-top:10%;" >
      
-                  <div class="card-header"><time >${userBlog.postDate }</time>
+                <div class="card-header"><time >${userBlog.postDate }</time>
                 <h3 class="text-justify text-capitalize	"> <b>  ${userBlog.title} </b></h3>
                 <h6 class="card-title text-muted"> Written By ${userBlog.firstname} ${userBlog.lastname} </h6>
                  <h6 class="card-subtitle text-muted"> ${userBlog.branch} </h6>

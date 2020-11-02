@@ -43,6 +43,9 @@
 <div class="card-header bg-dark">
 <h5 class="text-danger">  </h5>
 <h3 class="text-light">Sign Up</h3>
+ <!-- Logo -->
+                    <img alt="" src="views/img/logo1.png" style="width:17em; ">
+
 </div>
 
 	<div class="card-body">
@@ -72,7 +75,7 @@
                                 <input required="required" type="text" class="form-control" name="collegeId" id="" placeholder="College ID">
                                
                             </div>
-                          </div> 
+                        </div> 
                           
                            <!-- phone Number -->
                         <div class="flex-sm-column form-group flex-fill justify-content-sm-center">
@@ -81,7 +84,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> +91 </span>
                                 </div>
-                                <input type="text" class="form-control" name="phonenumber" id="" placeholder="Phone Number">
+                                <input type="text" class="form-control" name="phonenumber" placeholder="Phone Number">
                         
                             </div>
                       	</div>
@@ -124,14 +127,12 @@
                             </select>
                         
                         </div>
-                           
                         </div>
-                        
-                      	           
-                      <input type="hidden" name="id" />
-                      	
-                       <input type="file" class="custom-file-input" id="customFile"  name="profileImage">
-           
+                       		
+                      	 <!-- id -->           
+                       	 <input type="hidden" name="id" />
+                       <input hidden="hidden" type="file" class="custom-file-input" id="customFile"  name="profileImage">
+                         
 	</div>
 
  				  <!-- SignUp Button -->

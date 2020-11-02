@@ -1,120 +1,119 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>SignUp</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href=''>
-    <script src=''></script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog Post</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap CDN -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    
-      <style type="text/css">
-    img{
-    
-    padding: auto;
-    height: 50%;
-    width: 50%;
-    }
-    img[src="data:image/jpg;base64,"] {
-	visibility: hidden;
-	}
-	
-	
-    </style>
-    
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-<body class="container bg-white ">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+  </head>
+  <body>
+  
+<div class="row">
+<div class="col-sm-12">
 
-
-<div class="container">
-
-
-
-
-
-<div class="card-body">
-
-<div class="container">
-
-<div class="flex-sm-row">
-
-<form action="BlogPostController" method="post" enctype="multipart/form-data">
-
-
- 						<div class="flex-sm-column form-group flex-fill justify-content-sm-center">
-                           
-                                <div class="input-group  mb-5 p-5">
-                                    
-                                   <input required="required" value="${userBlog.title }" name="title" type="text" autofocus="autofocus" class=" form-control-plaintext" placeholder="   Enter Title " >
-								     <div class="">
-                              
-                                       <span class=" text-light btn btn-dark"> - Title </span>
-                                    </div><br>
-                                    
-                                        
-         
-								</div>
-                            
-                        </div>
-        
-
-			<!-- Choose Photo -->
-			<div class="flex-sm-column form-group flex-fill justify-content-sm-center">
-			<div class=" input-group custom-file mb-3 p-3 ">
-            <input type="file" class="custom-file-input " id="customFile"  name="postImage">
-            <label class="custom-file-label" for="customFile">Choose Image</label>
+  <!-- Blog Post Modal -->
+<a class="" data-toggle="modal" data-target="#myBlog">  
+               
+               <input type="button" value="Write Blog" class="btn btn-dark" >
+</a>
+             
             
-         	 </div>                            
-         	 </div>
-
-				
-			<img src="data:image/jpg;base64,${userBlog.blogPostImage}" alt="Circle Image" class="img-thumbnail img-fluid img-responsive">
-                
-                        <input type="hidden" name="sid" value="${student.collegeId}">
+            
+<div class="container">            
+            
+<div class="modal fade" id="myBlog" style="display: none;" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+					
+					<!-- Modal Header -->	
+    				 <div class="modal-header bg-dark">
+					<h5 class="modal-title text-light">Write Your Blog</h5>
+					<button type="button" class="close" data-dismiss="modal">
+					<h5 class="text-white">x</h5>
+					</button>
+					</div>
+ 															
+ 				   <!-- Modal body -->
+ 					<div class="modal-body">
+						
+						<!-- text Editor Form -->
+ 						<form action="BlogPostController" method="post" enctype="multipart/form-data">
+    					<div class="flex-sm-column form-group flex-fill justify-content-sm-center">
+                        
+                        	<div class="input-group ">
+                         	
+                         	<select  class="form-control custom-select" name="cardColor">
+                           
+                            <option value="${userBlog.cardColor}" selected="selected"> Card Color </option>
+                            <option value="bg-dark text-light">DARK</option>
+                            <option value="bg-white text-dark">WHITE</option>
+                            <option value="bg-primary">BLUE(Dark)</option>
+                            <option value="bg-info">BLUE(Light)</option>
+                            <option value="bg-success">GREEN</option>
+                            <option value="bg-danger">RED</option>
+                            <option value="bg-warning">YELLOW</option>
+                            <option value="bg-secondary text-light">GRAY</option>
+                            <option value="bg-light text-dark">LIGHT</option>
+                            
+                            
+                            </select>
+                        
+                        	</div>
+                           
+                        </div>			
+    					<!-- hidden  -->
+    					<input type="hidden" name="sid" value="${student.collegeId}">
 						<input type="hidden" name="viewId" value="${userBlog.blogpostId}">
                         <input type="hidden" name="collegeId" value="${student.collegeId}">
 						<input type="hidden" name="branch" value="${student.branch}">
-            		    
-            		    <div class="flex-sm-column form-group flex-fill justify-content-sm-center">
-                           
-                                <div class="input-group mb-3 p-3">
-                                    <textarea required="required" rows="12" name="post" spellcheck="true" cols="150" placeholder="Enter Post Here"> ${userBlog.post }</textarea><br>
-									
-									<div class="input-group float-left">
-                                    <input type="submit" value="Post" class=" btn btn-dark"/>
-                                    </div>
-								</div>
-                             		
-                        </div>
-                        
-    </form>                     
-           </div>  
-                             
-
-
+            		  	
+            		  	<input required="required" value="${userBlog.title }" name="title" type="text" autofocus="autofocus" class=" form-control" placeholder=" Enter Title " >
+            		  	<br>
+  						<textarea  id="summernote" name="post"> ${userBlog.post }</textarea>
+  							<button  type="submit" class="btn btn-dark">Post</button>
+  						</form>
+					</div> 
+         			 
+         		  <!--End Modal body -->
+                                                                
+               
+			<!-- Modal footer -->
+			<div class="modal-footer">
+			<button  type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+			</div>
 </div>
-
 </div>
-
 </div>
-
-
-</body>
-
+  
+</div>
+    
+<!-- row | col end -->
+</div>
+</div>    
+    <script>
+    $('#summernote').summernote({
+    	  placeholder: ' Write Your Blog Here',
+    	  tabsize: 2,
+    	  height: 300,                 // set editor height
+    	  minHeight: 300,             // set minimum height of editor
+    	  maxHeight: 500,             // set maximum height of editor
+    	  focus: true                  // set focus to editable area after initializing summernote
+    	
+    });      
+      /* To Know More .. */
+      /* https://summernote.org/getting-started/#basic-api */
+    </script>
+    
+    <script >
+    $(document).ready(function() {
+    	  $('#summernote').summernote();
+    });</script>
+  </body>
 </html>
