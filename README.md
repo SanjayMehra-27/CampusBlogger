@@ -23,6 +23,6 @@ This page contains all list of blogs published by the users.Each blog is designe
 This page contains profile information of user such as name, college id, email, phone number etc. User can also update the profile information here also can see their CLASS-MATES list.   
 
 ## Preview
-<iframe src="https://www.loom.com/embed/eed4c675a74040768f0f9db3e1e84807" frameborder="2"style="position: webkitallowfullscreen mozallowfullscreen allowfullscreen absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+<iframe src="https://www.loom.com/embed/eed4c675a74040768f0f9db3e1e84807" ></iframe>
 
 
