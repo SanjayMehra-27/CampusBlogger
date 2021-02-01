@@ -20,4 +20,4 @@ This page contains ragistered student's College Id and Password field.After fill
 This page contains all list of blogs published by the users.Each blog is designed using bootsrap-4 card.User can read blogs directly by clicking Read More option(Without Reload The Page).
 
 ##### 4. Profile Page
-This page contains profile information of user such as name, college id, email, phone number etc. User can also update the profile information here also can see thier CLASS-MATES list.   
+This page contains profile information of user such as name, college id, email, phone number etc. User can also update the profile information here also can see their CLASS-MATES list.   
