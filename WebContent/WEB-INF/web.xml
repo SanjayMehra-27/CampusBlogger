@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+	<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+		id="WebApp_ID" version="4.0">
+
+
+		<display-name>CampusBlogger</display-name>
+
+		<welcome-file-list>
+			<welcome-file>index.jsp</welcome-file>
+		</welcome-file-list>
+
+		<servlet>
+			<description></description>
+			<display-name>StudentController</display-name>
+			<servlet-name>StudentController</servlet-name>
+			<servlet-class>edu.campusblogger.student.StudentController</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>StudentController</servlet-name>
+			<url-pattern>/StudentController</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<description></description>
+			<display-name>LoginController</display-name>
+			<servlet-name>LoginController</servlet-name>
+			<servlet-class>edu.campusblogger.student.LoginController
+			</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>LoginController</servlet-name>
+			<url-pattern>/LoginController</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<description></description>
+			<display-name>BlogPostController</display-name>
+			<servlet-name>BlogPostController</servlet-name>
+			<servlet-class>edu.campusblogger.student.BlogPostController
+			</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>BlogPostController</servlet-name>
+			<url-pattern>/BlogPostController</url-pattern>
+		</servlet-mapping>
+	</web-app>
+</element>
